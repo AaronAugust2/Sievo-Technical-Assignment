@@ -31,7 +31,7 @@ namespace application {
         }
         
         static void Main(string[] args) {
-            Console.Write("\n***Welcome to the application! We shall begin with entering details for hiker 1 & 2:***\n");
+            Console.Write("***Welcome to the application! We shall begin with entering details for hiker 1 & 2:***\n");
             
             // I had to add exception handling here because an exception due to user error
             // would bug out the terminal due to some strange control character sequence or something. 
@@ -41,27 +41,26 @@ namespace application {
                 Hiker hiker1 = CreateHikerFromIO(1);
                 Hiker hiker2 = CreateHikerFromIO(2);
 
-                Console.Write("\n***The following data was inputted:***\n");
-                Console.Write("\nHiker 1:\n");
-                Console.Write(hiker1.stringify());
-                Console.Write("\n\nHiker 2:\n");            
-                Console.Write(hiker2.stringify());
-                Console.WriteLine("");
+                Console.Write("***The following data was inputted:***\n\n");
+                Console.Write("Hiker 1:\n");
+                Console.Write(hiker1.stringify() + "\n\n");
+                Console.Write("Hiker 2:\n");            
+                Console.Write(hiker2.stringify() + "\n\n");
 
                 bool successOfTrade = hiker1.TryTrade(hiker2);
 
                 if(successOfTrade) {
-                    Console.Write("\n***Trade between Hiker 1 & Hiker 2: Trade completed, see updated info below:***\n");
-                    Console.Write("\nHiker 1:\n");
-                    Console.Write(hiker1.stringify());
-                    Console.Write("\nHiker 2:\n");            
+                    Console.Write("***Trade between Hiker 1 & Hiker 2: Trade completed, see updated info below:***\n\n");
+                    Console.Write("Hiker 1:\n");
+                    Console.Write(hiker1.stringify() + "\n\n");
+                    Console.Write("Hiker 2:\n");            
                     Console.Write(hiker2.stringify() + "\n");
                 } else {
-                    Console.Write("\n***Trade between Hiker 1 & Hiker 2: Trade unsuccessful, see explanation below:***");
+                    Console.Write("***Trade between Hiker 1 & Hiker 2: Trade unsuccessful, see explanation below:***\n");
                     Console.Write(hiker1.TradeFailureReason(hiker2) + "\n");
                 }
             } catch (Exception e) {
-                Console.WriteLine("Invalid IO input, exiting program.");
+                Console.Write("Invalid IO input, exiting program.\n");
                 Environment.Exit(1);
             }
         }   

@@ -35,11 +35,11 @@ public class Hiker {
         }
 
         if(this.injured){
-            reasons += $"- Hiker {this.name} was injured\n";
+            reasons += $" -Hiker {this.name} was injured\n";
         }
 
         if(partner.injured){
-            reasons += $"- Hiker {partner.name} was injured\n";
+            reasons += $" -Hiker {partner.name} was injured\n";
         }
 
         return reasons;
