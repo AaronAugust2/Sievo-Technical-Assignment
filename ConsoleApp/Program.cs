@@ -6,13 +6,13 @@ namespace application {
         static Hiker CreateHikerFromIO(int id) {
             Console.Write($"\n---Enter details for hiker {id}:---\n");
             Console.Write("* Name of hiker: ");
-            String name = Console.ReadLine();
+            string name = Console.ReadLine();
             Console.Write("* Age of hiker: ");
             int age = int.Parse(Console.ReadLine());
             Console.Write("* Gender of hiker: ");
-            String gender = Console.ReadLine();
+            string gender = Console.ReadLine();
             Console.Write("* Last position of hiker (longitude, latitude): ");
-            String position = Console.ReadLine();
+            string position = Console.ReadLine();
             Console.Write("* Does the hiker have an injury? [True/False]: ");
             bool injured = bool.Parse(Console.ReadLine());
 
@@ -43,9 +43,9 @@ namespace application {
 
                 Console.Write("\n***The following data was inputted:***\n");
                 Console.Write("\nHiker 1:\n");
-                Console.Write(hiker1.Stringify());
+                Console.Write(hiker1.stringify());
                 Console.Write("\n\nHiker 2:\n");            
-                Console.Write(hiker2.Stringify());
+                Console.Write(hiker2.stringify());
                 Console.WriteLine("");
 
                 bool successOfTrade = hiker1.TryTrade(hiker2);
@@ -53,9 +53,9 @@ namespace application {
                 if(successOfTrade) {
                     Console.Write("\n***Trade between Hiker 1 & Hiker 2: Trade completed, see updated info below:***\n");
                     Console.Write("\nHiker 1:\n");
-                    Console.Write(hiker1.Stringify());
+                    Console.Write(hiker1.stringify());
                     Console.Write("\nHiker 2:\n");            
-                    Console.Write(hiker2.Stringify() + "\n");
+                    Console.Write(hiker2.stringify() + "\n");
                 } else {
                     Console.Write("\n***Trade between Hiker 1 & Hiker 2: Trade unsuccessful, see explanation below:***");
                     Console.Write(hiker1.TradeFailureReason(hiker2) + "\n");

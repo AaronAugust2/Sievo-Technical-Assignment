@@ -36,7 +36,7 @@ public class HikerTests
     [InlineData(false, false, 2, 0, 0, 2, " -Value of items does not match: 8 vs 4\n")]
     public void TradeFailureReasonCorrect(bool hikerInjury1, bool hikerInjury2, 
                               int hikerMushrooms1, int hikerApples1, 
-                              int hikerMushrooms2, int hikerApples2, String expected) {
+                              int hikerMushrooms2, int hikerApples2, string expected) {
     
         Item mushroom = new Item("Mushroom", 4);
         Item apples = new Item("Apples", 2); 
@@ -51,7 +51,7 @@ public class HikerTests
                                  injured = hikerInjury2, 
                                  inventory = new Inventory{Contents = [(mushroom, hikerMushrooms2), (apples, hikerApples2)]}};
        
-        String failureReason = hiker1.TradeFailureReason(hiker2);
+        string failureReason = hiker1.TradeFailureReason(hiker2);
         
         Assert.Equal(failureReason, expected);
     }

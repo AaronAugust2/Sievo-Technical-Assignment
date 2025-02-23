@@ -8,15 +8,15 @@ public class Inventory {
     public int CalculateValue(){
         return Contents.Aggregate(0, (sum, item) => sum + item.Item1.Value * item.Item2);
     }
-    public String Stringify(){
-        string inventoryString = "Items in inventory:\n";
+    public string stringify(){
+        string inventorystring = "Items in inventory:\n";
 
         foreach ((Item, int) item in this.Contents) {
-            inventoryString += $" -{item.Item1.Name}: {item.Item2}\n";
+            inventorystring += $" -{item.Item1.Name}: {item.Item2}\n";
         }
 
-        inventoryString += $" -> Total value of inventory: {this.CalculateValue()}";
+        inventorystring += $" -> Total value of inventory: {this.CalculateValue()}";
 
-        return inventoryString;
+        return inventorystring;
     }
 }

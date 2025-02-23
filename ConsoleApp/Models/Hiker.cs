@@ -1,10 +1,10 @@
 namespace ConsoleApp.Models;
 
 public class Hiker {
-    public String name {get; set;}
+    public string name {get; set;}
     public int age {get; set;}
-    public String gender {get; set;}
-    public String position {get; set;}
+    public string gender {get; set;}
+    public string position {get; set;}
     public bool injured {get; set;}
     public Inventory inventory {get; set;}
     
@@ -24,8 +24,8 @@ public class Hiker {
         }
     }
 
-    public String TradeFailureReason(Hiker partner){
-        String reasons = "";
+    public string TradeFailureReason(Hiker partner){
+        string reasons = "";
 
         int thisValue = this.inventory.CalculateValue();
         int partnerValue = partner.inventory.CalculateValue();
@@ -45,10 +45,10 @@ public class Hiker {
         return reasons;
     }
 
-    public String Stringify(){
-        string hikerInfoString = $"Name: {name}, Age: {age}, Gender: {gender}, Position: {position}, Injured: {injured}\n";
-        string hikerItemInfo = this.inventory.Stringify();
+    public string stringify(){
+        string hikerInfostring = $"Name: {name}, Age: {age}, Gender: {gender}, Position: {position}, Injured: {injured}\n";
+        string hikerItemInfo = this.inventory.stringify();
 
-        return hikerInfoString + hikerItemInfo;
+        return hikerInfostring + hikerItemInfo;
     }
 }
