@@ -57,7 +57,7 @@ public class HikerTests
                                  inventory = new Inventory{Contents = [(mushroom, hikerMushrooms2), (apples, hikerApples2)]}};
        
         String failureReason = hiker1.TradeFailureReason(hiker2);
-
+        
         Assert.Equal(failureReason, expected);
     }
 }

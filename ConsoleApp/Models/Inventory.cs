@@ -15,6 +15,8 @@ public class Inventory {
             inventoryString += $" -{item.Item1.Name}: {item.Item2}\n";
         }
 
+        inventoryString += $" -> Total value of inventory: {this.CalculateValue()}";
+
         return inventoryString;
     }
 }
