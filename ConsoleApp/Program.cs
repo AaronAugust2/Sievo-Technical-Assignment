@@ -1,7 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-using System.Runtime;
-
-using ConsoleApp.Models;
+﻿using ConsoleApp.Models;
 
 namespace application {
     class Program {
