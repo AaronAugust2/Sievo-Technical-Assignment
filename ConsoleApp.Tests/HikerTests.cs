@@ -2,11 +2,6 @@ namespace ConsoleApp.Tests;
 
 using ConsoleApp.Models;
 
-// Test: Hiker 1 <-> Hiker 2 operations invariable?
-// Test: trade logic works (injury situation, value)
-// Inventories are swapped if trade successful
-// Explanations right
-
 public class HikerTests
 {
     [Theory]
