@@ -5,14 +5,19 @@ namespace application {
         static Item[] HikerItems = [new Item("Medication", 5), new Item("Water", 4), new Item("Food", 3)]; 
         static Hiker CreateHikerFromIO(int id) {
             Console.Write($"\n---Enter details for hiker {id}:---\n");
+
             Console.Write("* Name of hiker: ");
             string name = Console.ReadLine();
+
             Console.Write("* Age of hiker: ");
             int age = int.Parse(Console.ReadLine());
+
             Console.Write("* Gender of hiker: ");
             string gender = Console.ReadLine();
+
             Console.Write("* Last position of hiker (longitude, latitude): ");
             string position = Console.ReadLine();
+            
             Console.Write("* Does the hiker have an injury? [True/False]: ");
             bool injured = bool.Parse(Console.ReadLine());
 
